@@ -27,6 +27,8 @@ body {
                          "f f f";
   }
 
+ /*header*/ 
+
 header {
     grid-area: h;
 
@@ -36,6 +38,7 @@ header {
 }
 
 header h1 {
+    font-size: 36px;
     color: #2F2E41;
 }
 
@@ -69,8 +72,9 @@ header h1 {
 .ionicon {
     color: #E35B5B;
     fill: #E35B5B;
-    stroke: #E35B5B;
 }
+
+ /*main*/ 
 
 main {
     grid-area: m;
@@ -78,10 +82,11 @@ main {
     /*grid*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30% 30% 40%;
 }
 
 .botoes_principais {
-    border: black solid 1px;
+    border: #2F2E41 solid 1px;
     height: 80px;
 
     /*grid*/
@@ -93,6 +98,8 @@ main {
 .botao_icon {
     align-self: center;
     margin-left: 50px;
+
+    fill: #3F3D56;
 }
 
 main div div svg {
@@ -105,6 +112,9 @@ main div div svg {
    height:100%;
    margin: auto;
 
+   /*cores da letras dos botões*/
+   color: #2F2E41;
+
    /*grid*/
    display: grid;
    grid-template-columns: 1fr;
@@ -112,15 +122,67 @@ main div div svg {
 }
 
 main div div h2 {
+    font-size: 30px;
     justify-self: center;
+    align-self:center;
+
+    margin-top: 50px;
+    margin-right: 50px;
 }
 
 main div div h4 {
-    justify-self: center;
-    align-self: baseline;
+    font-size: 18px;
+    margin-right: 50px;
+    align-self: center;
 }
 
+#botao_esquerda {
+    background-color: #2F2E41;
+    border-radius: 10px 0 0 10px;  
+}
+
+#botao_esquerda div svg {
+    fill: #FFA12F;
+}
+
+#botao_esquerda div h2 {
+    color: #FFA12F;
+}
+
+#botao_esquerda div h4 {
+    color: #FFB348;
+}
+
+#botao_direita {
+    border-radius: 0 10px 10px 0;
+}
+
+#botao_centro {
+    border-left: none;
+    border-right: none;
+}
+
+.frase {
+    color: #3F3D56;
+
+    /*grid*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+}
+
+.frase h4 {
+    align-self: center;
+    font-size: 24px;
+}
+
+.frase h3 {
+    font-size: 36px;
+    align-self: center;
+}
+
+ /*footer*/ 
+
 footer {
-    background-color: rgb(9, 255, 0);
     grid-area: f;
 }
