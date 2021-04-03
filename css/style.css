@@ -9,7 +9,7 @@ html, body {
 
 body {
 
-    background: linear-gradient(60deg, rgba(54,209,220,1) 0%, rgba(91,134,229,1) 100%);
+    background: linear-gradient(60deg, rgba(114,198,239,1) 0%, rgba(0,78,143,1) 100%);
 
     display: grid;
     grid-template-columns: 1fr;
@@ -48,7 +48,7 @@ header {
 
 header h1 {
     font-size: 36px;
-    color: #2F2E41;
+    color: #FFFFFF;
 }
 
 .nome {
@@ -79,21 +79,21 @@ header h1 {
 }
 
 .ionicon {
-    color: #E35B5B;
-    fill: #E35B5B;
+    color: #FFFFFF;
+    fill: #FFFFFF;
 }
 
 #email :hover {
-    color: #CD3C30;
+    color: #2F2E41;
 }
 #linkedin :hover {
-    fill: #0A66C2;
+    fill: #2F2E41;
 }
 #dribble :hover {
-    fill: #F082AC;
+    fill: #2F2E41;
 }
 #github :hover {
-    fill: #2D333B;
+    fill: #2F2E41;
 }
 
  /*main*/ 
@@ -108,7 +108,7 @@ main {
 }
 
 .botoes_principais {
-    border: #2F2E41 solid 1px;
+    border: #FFFFFF solid 1px;
     height: 80px;
 
     /*grid*/
@@ -127,7 +127,7 @@ main div a {
    margin: auto;
 
    /*cores da letras dos botões*/
-   color: #2F2E41;
+   color: #FFFFFF;
 
    /*grid*/
    display: grid;
@@ -146,7 +146,7 @@ main div div h2 {
 }
 
 #botao_esquerda :hover {
-    background-color: #2F2E41;
+    background-color: #FFFFFF;
     border-radius: 10px 0 0 10px;
 
 }
@@ -156,7 +156,7 @@ main div div h2 {
 }
 
 #botao_direita :hover {
-    background-color: #2F2E41;
+    background-color: #FFFFFF;
     border-radius: 0 10px 10px 0;  
 }
 
@@ -166,9 +166,8 @@ main div div h2 {
 }
 
 .botoes_principais :hover {
-    background-color: #2F2E41;
-    color: #FFA12F;
-    fill: #FFA12F;
+    background-color: #FFFFFF;
+    color: #2F2E41;
 }
 
 
@@ -241,9 +240,9 @@ main div div h2 {
 
 footer {
     grid-area: f;
-
     background-color: #FFFFFF;
 }
+
 
 
 
