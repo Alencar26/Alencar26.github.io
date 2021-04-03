@@ -74,6 +74,25 @@ header h1 {
     fill: #E35B5B;
 }
 
+/*
+.social_icon :hover {
+    color: #5E7AFE;
+    fill: #5E7AFE;
+}
+*/
+#email :hover {
+    color: #CD3C30;
+}
+#linkedin :hover {
+    fill: #0A66C2;
+}
+#dribble :hover {
+    fill: #F082AC;
+}
+#github :hover {
+    fill: #2D333B;
+}
+
  /*main*/ 
 
 main {
@@ -91,8 +110,17 @@ main {
 
     /*grid*/
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
+}
+
+main div a {
+    /*grid*/
+    display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 100%;
+
+    text-decoration: none;
 }
 
 .botao_icon {
@@ -131,6 +159,7 @@ main div div h2 {
 }
 
 main div div h4 {
+    color: #2F2E41;
     font-size: 18px;
     margin-right: 50px;
     align-self: center;
@@ -138,6 +167,13 @@ main div div h4 {
 
 #botao_esquerda {
     background-color: #2F2E41;
+    border-radius: 10px 0 0 10px;  
+}
+
+#botao_esquerda :hover {
+    background-color: #fff;
+    color: #2F2E41;
+    fill: #2F2E41;
     border-radius: 10px 0 0 10px;  
 }
 
@@ -160,6 +196,12 @@ main div div h4 {
 #botao_centro {
     border-left: none;
     border-right: none;
+}
+
+.botoes_principais :hover {
+    background-color: #2F2E41;
+    color: #FFA12F;
+    fill: #FFA12F;
 }
 
 .frase {
