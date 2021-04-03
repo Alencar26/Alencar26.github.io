@@ -8,23 +8,32 @@ html, body {
   }
 
 body {
-    background-image: url("../fundo.png");
-    background-repeat: no-repeat;
+
+    background: linear-gradient(60deg, rgba(54,209,220,1) 0%, rgba(91,134,229,1) 100%);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60vh 20vh 20vh;
+
+    grid-template-areas: "c"
+                         "w"
+                         "f";
 }
 
 .container {
+    grid-area: c;
+
     width: 75vw;
-    height: 100vh;
+    height: 60vh;
     margin: auto;
 
     /*grid*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30vh 60vh 10vh;
+    grid-template-rows: 30vh 30vh;
 
     grid-template-areas: "h h h"
-                         "m m m"
-                         "f f f";
+                         "m m m";
   }
 
  /*header*/ 
@@ -74,12 +83,6 @@ header h1 {
     fill: #E35B5B;
 }
 
-/*
-.social_icon :hover {
-    color: #5E7AFE;
-    fill: #5E7AFE;
-}
-*/
 #email :hover {
     color: #CD3C30;
 }
@@ -101,7 +104,7 @@ main {
     /*grid*/
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30% 30% 40%;
+    grid-template-rows: 50% 50%;
 }
 
 .botoes_principais {
@@ -115,24 +118,7 @@ main {
 }
 
 main div a {
-    /*grid*/
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 100%;
-
     text-decoration: none;
-}
-
-.botao_icon {
-    align-self: center;
-    margin-left: 50px;
-
-    fill: #3F3D56;
-}
-
-main div div svg {
-    width: 50px;
-    height: 50px;
 }
 
 .botoes_titulos {
@@ -146,51 +132,32 @@ main div div svg {
    /*grid*/
    display: grid;
    grid-template-columns: 1fr;
-   grid-template-rows: 50% 50%;
+   grid-template-rows: 100%;
 }
 
 main div div h2 {
     font-size: 30px;
     justify-self: center;
     align-self:center;
-
-    margin-top: 50px;
-    margin-right: 50px;
-}
-
-main div div h4 {
-    color: #2F2E41;
-    font-size: 18px;
-    margin-right: 50px;
-    align-self: center;
 }
 
 #botao_esquerda {
-    background-color: #2F2E41;
     border-radius: 10px 0 0 10px;  
 }
 
 #botao_esquerda :hover {
-    background-color: #fff;
-    color: #2F2E41;
-    fill: #2F2E41;
-    border-radius: 10px 0 0 10px;  
-}
+    background-color: #2F2E41;
+    border-radius: 10px 0 0 10px;
 
-#botao_esquerda div svg {
-    fill: #FFA12F;
-}
-
-#botao_esquerda div h2 {
-    color: #FFA12F;
-}
-
-#botao_esquerda div h4 {
-    color: #FFB348;
 }
 
 #botao_direita {
     border-radius: 0 10px 10px 0;
+}
+
+#botao_direita :hover {
+    background-color: #2F2E41;
+    border-radius: 0 10px 10px 0;  
 }
 
 #botao_centro {
@@ -204,27 +171,79 @@ main div div h4 {
     fill: #FFA12F;
 }
 
-.frase {
-    color: #3F3D56;
 
-    /*grid*/
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
+/*wave*/
+.wave_container {
+    grid-area: w;
 }
 
-.frase h4 {
-    align-self: center;
-    font-size: 24px;
-}
+.waves {
+    position:relative;
+    width: 100%;
+    height:100%;
+    margin-bottom:-7px; /*Fix for safari gap*/
+    min-height:100px;
+    max-height:150px;
+  }
+  
+  .content {
+    position:relative;
+    height:20vh;
+    text-align:center;
+    background-color: white;
+  }
+  
+  /* Animation */
+  
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+  }
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+  @keyframes move-forever {
+    0% {
+     transform: translate3d(-90px,0,0);
+    }
+    100% { 
+      transform: translate3d(85px,0,0);
+    }
+  }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
+  }
 
-.frase h3 {
-    font-size: 36px;
-    align-self: center;
-}
 
  /*footer*/ 
 
 footer {
     grid-area: f;
+
+    background-color: #FFFFFF;
 }
+
+
+
