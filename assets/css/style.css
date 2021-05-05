@@ -198,6 +198,7 @@ main div div h2 {
 /*wave*/
 .wave_container {
     grid-area: w;
+    align-self: end;
 }
 
 .waves {
